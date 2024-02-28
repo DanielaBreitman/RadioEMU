@@ -13,7 +13,7 @@ class EmulatorProperties:
 
     def __init__(self):
         here = Path(__file__).parent
-        all_emulator_numbers = np.load('/home/dbreitman/Radio_Background/Models/Final_model/Feb_wPScsts.npz')
+        all_emulator_numbers = np.load('Feb_wPScsts.npz')
         self._data = all_emulator_numbers
         
         self.logPS_mean = all_emulator_numbers['logPS_mean']
@@ -28,7 +28,7 @@ class EmulatorProperties:
         self.logTr_mean = all_emulator_numbers["logTr_mean"]
         self.logTr_std = all_emulator_numbers["logTr_std"]
         
-        self.mean_errors = np.load('/home/dbreitman/Radio_Background/Models/Final_model/median_test_errors.npz')
+        self.mean_errors = np.load('median_test_errors.npz')
 
 
 
